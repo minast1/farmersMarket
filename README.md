@@ -7,17 +7,29 @@ Browser SessionStorage -> to store user cart details
 Prisma -> typescript ORM to interact with database
 PlanetScale Mysql Database
 
-yarn install to install dependencies
-yarn dev to start server on localhost:3000
+# Install Dependencies
 
-index Page variables
+yarn install
+
+# Start Server on localhost:3000
+
+yarn dev
+
+# Template Engine
+
+Handlebars Moustache syntax
+
+# Index Page variables
+
 1.session, session -> {name, email, id };
 
-login Page variables
+# login Page variables
+
 1.valError
 2.errors -> {email, password}
 
-Register Page variables
+# Register Page variables
+
 1.valError
 2.errors -> {email, password}
 
