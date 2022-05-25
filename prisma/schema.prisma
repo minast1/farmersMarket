@@ -1,0 +1,35 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["referentialIntegrity"]
+}
+
+datasource db {
+  provider             = "mysql"
+  referentialIntegrity = "prisma"
+  url                  = "mysql://3t7lpv7qi2o4:pscale_pw_RYRJ3R1k3U5yaJxe6GWJDGow124lmsrsinnDIvI_RiA@jqdk6zeno51a.eu-west-2.psdb.cloud/farmers_market?sslaccept=strict"
+}
+
+model User {
+  id       String  @default(uuid())
+  email    String  @unique
+  name     String?
+  password String  @unique
+  cart     Cart?
+}
+
+model Cart {
+  id       String    @id @default(uuid())
+  products Product[]
+  user     User?     @relation(fields: [userId], references: [id])
+  userId   String?   @unique
+
+  @@index([userId])
+}
+
+model Product {
+  id    String @id @default(uuid())
+  name  String
+  image String
+  price Int
+  carts Cart[]
+}

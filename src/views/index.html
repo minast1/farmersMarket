@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div>I am the index page </div>
+     <p>I contain {{products.length}} product items</p>
+     {{#if session}}
+      <p>Welcome {{session.name}}</p>
+     {{/if}}
+    
+     {{#if session}}
+     <div style="display:flex; flex-direction: column;">
+    <a href="/cart">Your Cart</a>
+    <a href="/logout">Log out of Session</a>
+    </div>
+   
+        {{else}}
+        <a href="/login">To the login page</a>
+       
+     {{/if}}
+    
+</body>
+</html>

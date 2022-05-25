@@ -1,0 +1,35 @@
+{
+  "name": "rest-hapi",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "@hapi/cookie": "^11.0.2",
+    "@hapi/hapi": "20.2.2",
+    "@hapi/inert": "^6.0.5",
+    "@hapi/vision": "^6.1.0",
+    "@prisma/client": "3.14.0",
+    "@types/bcrypt": "^5.0.0",
+    "@types/node": "16.11.36",
+    "bcrypt": "^5.0.1",
+    "handlebars": "^4.7.7",
+    "joi": "^17.6.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^6.3.1",
+    "@types/express": "4.17.13",
+    "@types/hapi__cookie": "^10.1.4",
+    "@types/hapi__hapi": "20.0.10",
+    "@types/hapi__inert": "^5.2.3",
+    "@types/hapi__vision": "^5.5.3",
+    "@types/node": "16.11.36",
+    "prisma": "3.14.0",
+    "ts-node": "10.8.0",
+    "typescript": "4.6.4"
+  },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  }
+}
